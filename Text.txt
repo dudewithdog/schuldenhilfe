@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schuldenhilfe Schweiz – Beratung, Musterbriefe &amp; Unterstützung</title>
+  <meta name="description" content="Hilfreiche Anlaufstellen, Musterbriefe, Budgethilfen, Soforthilfe und Hinweise zu Stiftungen und Fonds bei Schulden in der Schweiz." />
+
+  <style>
+    :root {
+      --cream:        #F5F2EC;
+      --cream-dark:   #EDE9E0;
+      --ink:          #1F2D3D;
+      --ink-mid:      #3A4A5C;
+      --ink-light:    #6B7C8E;
+      --sage:         #7E9680;
+      --sage-light:   #C4D4BE;
+      --sage-pale:    #EBF0E8;
+      --warm-white:   #FDFAF5;
+      --border:       #D8D2C6;
+      --card-bg:      #FFFFFF;
+      --radius:       10px;
+      --radius-lg:    16px;
+      --shadow:       0 2px 12px rgba(31,45,61,0.07);
+      --shadow-hover: 0 6px 24px rgba(31,45,61,0.13);
+      --font-serif:   'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+      --font-sans:    'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: normal;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    h1 { font-size: clamp(1.9rem, 5.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); margin-bottom: 0.5em; }
+    h3 { font-size: clamp(1rem, 2.5vw, 1.12rem); }
+
+    p { color: var(--ink-mid); }
+    a { color: var(--sage); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--ink); }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+
+    section { padding: 4rem 0; }
+    section + section { border-top: 1px solid var(--border); }
+
+    /* NAV */
+    nav {
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.55rem 1.25rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 0.82rem;
+      color: var(--ink-light);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.76rem;
+      color: var(--ink-mid);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.8;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--sage); }
+
+    /* HERO */
+    .hero {
+      background-color: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      padding: 4.5rem 0 3.5rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sage);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-subline {
+      font-family: var(--font-serif);
+      font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+      color: var(--ink-light);
+      margin: 0.65rem 0 1.4rem;
+      font-style: italic;
+      max-width: 600px;
+    }
+
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 0.7em 1.5em;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.15s;
+      text-decoration: none;
+      border: none;
+    }
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary { background: var(--sage); color: #fff; }
+    .btn-primary:hover {
+      background: #6a8270;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(126,150,128,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink-mid);
+      border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover {
+      background: var(--sage-pale);
+      color: var(--ink);
+      border-color: var(--sage);
+    }
+
+    .btn-sm {
+      background: var(--sage-pale);
+      color: var(--ink);
+      font-size: 0.85rem;
+      padding: 0.55em 1.1em;
+      border-radius: var(--radius);
+      display: inline-block;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+      align-self: flex-start;
+    }
+    .btn-sm:hover { background: var(--sage-light); color: var(--ink); }
+
+    /* KARTEN */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.75rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+    .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .card h3 { margin: 0; }
+    .card p { font-size: 0.9rem; flex: 1; }
+
+    .card-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--sage);
+      font-weight: 700;
+    }
+
+    .link-note {
+      font-size: 0.82rem;
+      color: var(--ink-light);
+      font-style: italic;
+    }
+
+    /* HINWEISBOXEN */
+    .hint-box {
+      background: var(--sage-pale);
+      border-left: 3px solid var(--sage);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.4rem;
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      margin-top: 1.5rem;
+    }
+    .hint-box strong { color: var(--ink); }
+
+    .warning-note {
+      background: #FFF8ED;
+      border-left: 3px solid #C8A04A;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 0.9rem 1.25rem;
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      margin-top: 1.25rem;
+    }
+    .warning-note strong { color: var(--ink); }
+
+    /* ABSCHLUSS */
+    .closing {
+      background: var(--cream-dark);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 4.5rem 0 4rem;
+    }
+    .closing h2 { color: var(--ink); margin-bottom: 1rem; }
+    .closing p {
+      color: var(--ink-mid);
+      max-width: 600px;
+      margin: 0 auto 1.75rem;
+      font-size: 1rem;
+    }
+    .closing-motto {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 3vw, 1.55rem);
+      color: var(--ink);
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--cream-dark);
+      border-top: 1px solid var(--border);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+    .footer-brand { font-family: var(--font-serif); font-size: 0.97rem; color: var(--ink); margin-bottom: 0.3rem; }
+    .footer-sub { font-size: 0.8rem; color: var(--ink-light); margin-bottom: 0.75rem; }
+    .disclaimer { font-size: 0.79rem; color: var(--ink-light); max-width: 580px; margin: 0 auto; line-height: 1.55; }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      section { padding: 2.5rem 0; }
+      .hero { padding: 2.5rem 0 2rem; }
+      .closing { padding: 3rem 0 2.5rem; }
+      .nav-links { gap: 0.75rem; }
+      .nav-links a { font-size: 0.7rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 601px) and (max-width: 899px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media print {
+      nav, .hero-buttons, footer { display: none !important; }
+      body { background: #fff; font-size: 14px; }
+      .card { box-shadow: none; border-color: #ccc; }
+      section { padding: 1.5rem 0; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav aria-label="Hauptnavigation">
+    <div class="nav-inner">
+      <span class="nav-brand">Ganz normales Alltagswissen – Finanzen</span>
+      <ul class="nav-links">
+        <li><a href="#beratung">Beratung</a></li>
+        <li><a href="#musterbriefe">Musterbriefe</a></li>
+        <li><a href="#budget">Budget</a></li>
+        <li><a href="#betreibung">Betreibung</a></li>
+        <li><a href="#stiftungen-fonds">Stiftungen &amp; Fonds</a></li>
+        <li><a href="#krise">Soforthilfe</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero" id="top">
+    <div class="container">
+      <p class="section-label">Ganz normales Alltagswissen – Finanzen</p>
+      <h1>Hilfe finden, wenn Schulden drücken.</h1>
+      <p class="hero-subline">Beratung, Musterbriefe, Budgethilfen und Unterstützung in der Schweiz.</p>
+      <p style="max-width:580px; color:var(--ink-mid); font-size:1.02rem; margin-bottom:2rem; line-height:1.7;">
+        Diese Seite sammelt geprüfte Anlaufstellen, Vorlagen und Hilfen:
+        für Betreibung, Zahlungsbefehl, Budget, seelischen Druck sowie Stiftungen und Fonds.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://schulden.ch/fachstellen/" class="btn btn-primary" target="_blank" rel="noopener">Beratung finden</a>
+        <a href="https://caritas-regio.ch/angebote/soziale-rechtliche-unterstuetzung/schuldenberatung/vorlagen-musterbriefe-hilfsmittel" class="btn btn-outline" target="_blank" rel="noopener">Musterbriefe &amp; Vorlagen</a>
+        <a href="#stiftungen-fonds" class="btn btn-outline">Stiftungen &amp; Fonds prüfen</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BERATUNG FINDEN -->
+
+  <section id="beratung">
+    <div class="container">
+      <p class="section-label">Fachstellen</p>
+      <h2>Beratung finden</h2>
+      <p style="max-width:600px; margin-bottom:0.25rem;">
+        Wenn Schulden drücken, ist eine Fachstelle oft der beste erste Schritt.
+        Die Beratung ist vertraulich, gemeinnützig und hilft dabei, die Lage zu sortieren.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <div class="card-label">Schulden</div>
+          <h3>Schuldenberatung Schweiz</h3>
+          <p>Fachstellen nach Region suchen. Kostenlose und unabhängige Erstberatung.</p>
+          <a href="https://schulden.ch/fachstellen/" class="btn-sm" target="_blank" rel="noopener">Fachstelle finden</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Budget</div>
+          <h3>Budgetberatung Schweiz</h3>
+          <p>Hilft dir, Einnahmen und Ausgaben zu ordnen und einen Plan zu machen.</p>
+          <a href="https://www.budgetberatung.ch" class="btn-sm" target="_blank" rel="noopener">budgetberatung.ch</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Caritas</div>
+          <h3>Caritas Schuldenberatung</h3>
+          <p>Beratung für Menschen in finanzieller Not. Kostenlos, persönlich, vertraulich.</p>
+          <a href="https://caritas-regio.ch/angebote/soziale-rechtliche-unterstuetzung/schuldenberatung" class="btn-sm" target="_blank" rel="noopener">Zur Caritas</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Gemeinde / Stadt</div>
+          <h3>Sozialberatung</h3>
+          <p>Die Sozialberatung deiner Gemeinde oder Stadt ist kostenlos und vertraulich.</p>
+          <p class="link-note">Suche auf der Website deiner Gemeinde nach „Sozialberatung" oder „Soziale Dienste".</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSTERBRIEFE & VORLAGEN -->
+
+  <section id="musterbriefe">
+    <div class="container">
+      <p class="section-label">Vorlagen</p>
+      <h2>Musterbriefe &amp; Vorlagen</h2>
+      <p style="max-width:600px; margin-bottom:0.25rem;">
+        Geprüfte externe Vorlagen und Hilfsmittel für Betreibung, Pfändung,
+        Budget und Schreiben an Gläubiger.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Caritas – Musterbriefe, Vorlagen, Hilfsmittel</h3>
+          <p>Musterbriefe bei Betreibung und Pfändung, Budget-Tools und weiterführende Links.</p>
+          <a href="https://caritas-regio.ch/angebote/soziale-rechtliche-unterstuetzung/schuldenberatung/vorlagen-musterbriefe-hilfsmittel" class="btn-sm" target="_blank" rel="noopener">Zu den Caritas-Vorlagen</a>
+        </div>
+        <div class="card">
+          <h3>Plusminus – Musterbriefe</h3>
+          <p>Musterbriefe und Vorlagen für Gläubiger, Inkassobüros und Ämter.</p>
+          <a href="https://www.plusminus.ch/informationen/downloads-mustebriefe/" class="btn-sm" target="_blank" rel="noopener">Plusminus-Vorlagen öffnen</a>
+        </div>
+        <div class="card">
+          <h3>Budgetberatung Schweiz – Budgetvorlagen</h3>
+          <p>Budgetvorlagen, Einnahmen-/Ausgabenkontrolle und Planungshilfen.</p>
+          <a href="https://budgetberatung.ch/budgetvorlagen" class="btn-sm" target="_blank" rel="noopener">Budgetvorlagen öffnen</a>
+        </div>
+        <div class="card">
+          <h3>Plusminus PDF – Was tun bei Betreibung?</h3>
+          <p>Kompaktes Merkblatt in einfacher Sprache: Was tun bei einer Betreibung?</p>
+          <a href="https://plusminus.ch/cms928/wp-content/uploads/merkblatt-betreibung-einfach.pdf" class="btn-sm" target="_blank" rel="noopener">Merkblatt öffnen (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET & ÜBERBLICK -->
+
+  <section id="budget">
+    <div class="container">
+      <p class="section-label">Überblick</p>
+      <h2>Budget &amp; Überblick</h2>
+      <p style="max-width:600px; margin-bottom:0.25rem;">
+        Ein Budget löst nicht alles, aber es schafft Übersicht:
+        Was kommt rein, was geht raus, was ist dringend?
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Budgetvorlagen</h3>
+          <p>Leere Vorlagen zum Ausfüllen für Einnahmen, Ausgaben und Fixkosten.</p>
+          <a href="https://budgetberatung.ch/budgetvorlagen" class="btn-sm" target="_blank" rel="noopener">Budgetvorlagen öffnen</a>
+        </div>
+        <div class="card">
+          <h3>Budgetbeispiele</h3>
+          <p>Ausgefüllte Beispielbudgets für verschiedene Lebenssituationen.</p>
+          <a href="https://budgetberatung.ch/budgetbeispiele" class="btn-sm" target="_blank" rel="noopener">Budgetbeispiele ansehen</a>
+        </div>
+        <div class="card">
+          <h3>Budgethilfen und Tools</h3>
+          <p>Online-Rechner, Checklisten und Hilfsmittel für die Budgetplanung.</p>
+          <a href="https://budgetberatung.ch/budgethilfen" class="btn-sm" target="_blank" rel="noopener">Budgethilfen öffnen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BETREIBUNG / ZAHLUNGSBEFEHL -->
+
+  <section id="betreibung">
+    <div class="container">
+      <p class="section-label">Dokument verstehen</p>
+      <h2>Zahlungsbefehl oder Betreibung erhalten?</h2>
+      <p style="max-width:600px; margin-bottom:0.25rem;">
+        Nicht ignorieren. Erst lesen, dann prüfen, dann handeln.
+        Offizielle Informationen erklären, was ein Zahlungsbefehl bedeutet
+        und welche Fristen wichtig sind.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>ch.ch – Betreibung, Zahlungsbefehl, Rechtsvorschlag</h3>
+          <p>Offizielle Schweizer Erklärungen zu Betreibung, Pfändung und den wichtigsten Fristen.</p>
+          <a href="https://www.ch.ch/de/steuern-und-finanzen/schulden--betreibungen-und-konkurs/betreibungen/" class="btn-sm" target="_blank" rel="noopener">ch.ch öffnen</a>
+        </div>
+        <div class="card">
+          <h3>Caritas – Ratgeber Betreibung &amp; Pfändung</h3>
+          <p>Praktischer Ratgeber: Was bei einer Betreibung zu tun ist.</p>
+          <a href="https://caritas-regio.ch/angebote/soziale-rechtliche-unterstuetzung/schuldenberatung/ratgeber-betreibung-pfaendung" class="btn-sm" target="_blank" rel="noopener">Ratgeber öffnen</a>
+        </div>
+        <div class="card">
+          <h3>Plusminus – Betreibung einfach erklärt</h3>
+          <p>Kurze, verständliche Erklärung zum Ablauf einer Betreibung in der Schweiz.</p>
+          <a href="https://www.plusminus.ch/informationen/betreibung/" class="btn-sm" target="_blank" rel="noopener">Plusminus öffnen</a>
+        </div>
+      </div>
+      <div class="hint-box">
+        <strong>Wichtig:</strong>
+        Bei einer Abholungsaufforderung oder einem Zahlungsbefehl läuft eine Frist.
+        Nicht warten. Direkt eine Beratungsstelle kontaktieren.
+      </div>
+    </div>
+  </section>
+
+  <!-- STIFTUNGEN & FONDS -->
+
+  <section id="stiftungen-fonds">
+    <div class="container">
+      <p class="section-label">Zusätzliche Unterstützung</p>
+      <h2>Auch prüfen: Stiftungen &amp; Fonds</h2>
+      <p style="max-width:660px;">
+        Manchmal entsteht finanzieller Druck durch einzelne Kosten, die plötzlich zu viel werden:
+        Tierarztkosten, Weiterbildung, Gesundheitskosten, Kinderbedarf oder eine Übergangsphase
+        ohne genug Einkommen. In solchen Fällen können Stiftungen oder Fonds helfen.
+      </p>
+      <div class="warning-note">
+        <strong>Wichtig:</strong>
+        Unterstützung ist zweckgebunden, an Bedingungen geknüpft und nie garantiert.
+        Stiftungen ersetzen keine Schuldenberatung und zahlen meist nicht einfach bestehende Schulden.
+        Aber sie können einzelne Belastungen abfedern.
+      </div>
+      <div class="grid" style="margin-top:1.75rem;">
+        <div class="card">
+          <div class="card-label">Stiftungssuche</div>
+          <h3>SwissFoundations</h3>
+          <p>Überblick über Stiftungssuchen und Stiftungsverzeichnisse in der Schweiz.</p>
+          <a href="https://www.swissfoundations.ch/stiftungssektor/stiftungssuche/" class="btn-sm" target="_blank" rel="noopener">Stiftungssuche öffnen</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Offizielles Verzeichnis</div>
+          <h3>Eidgenössisches Stiftungsverzeichnis</h3>
+          <p>Offizielles Verzeichnis der Stiftungen unter eidgenössischer Aufsicht.</p>
+          <a href="https://www.esa.admin.ch/de/stiftungsverzeichnis" class="btn-sm" target="_blank" rel="noopener">Verzeichnis öffnen</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Fonds &amp; Stiftungen</div>
+          <h3>ZHAW Fonds- und Stiftungsverzeichnis</h3>
+          <p>Verzeichnis mit Fonds und Stiftungen sowie Hinweisen zur Gesuchstellung.</p>
+          <a href="https://www.zhaw.ch/storage/sozialearbeit/dienstleistung/ISM/Fonds_und_Stiftungsverzeichnis_2024_25.pdf" class="btn-sm" target="_blank" rel="noopener">PDF öffnen</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Notlagen</div>
+          <h3>Winterhilfe Schweiz</h3>
+          <p>Unterstützung bei konkreten Notlagen und dringenden Rechnungen.</p>
+          <a href="https://www.winterhilfe.ch/hilfe-erhalten" class="btn-sm" target="_blank" rel="noopener">Hilfe erhalten</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Bildung</div>
+          <h3>EDUCA SWISS</h3>
+          <p>Beratung und sozialverträgliche Finanzierung für Ausbildung und Weiterbildung.</p>
+          <a href="https://educaswiss.ch/" class="btn-sm" target="_blank" rel="noopener">Bildungsfinanzierung prüfen</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Kanton Zürich</div>
+          <h3>Kanton Zürich – Fonds &amp; Stiftungen</h3>
+          <p>Finanzielle Unterstützung durch Fonds und Stiftungen im Kanton Zürich.</p>
+          <a href="https://www.zh.ch/de/bildungsdirektion/amt-fuer-jugend-und-berufsberatung/finanzielle-unterstuetzung-durch-fonds---stiftungen.html" class="btn-sm" target="_blank" rel="noopener">Kanton Zürich öffnen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFORTHILFE / KRISE -->
+
+  <section id="krise">
+    <div class="container">
+      <p class="section-label">Soforthilfe</p>
+      <h2>Wenn der Druck zu gross wird</h2>
+      <p style="max-width:600px; margin-bottom:0.25rem;">
+        Geldsorgen können seelisch sehr belasten.
+        Wenn du nicht mehr weiterweisst oder dringend mit jemandem sprechen musst,
+        gibt es vertrauliche Hilfe.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <div class="card-label">Seelische Not</div>
+          <h3>143 – Die Dargebotene Hand</h3>
+          <p>Zuhören, Tag und Nacht. Für schwierige Momente, Sorgen und alles dazwischen. Anonym und kostenlos.</p>
+          <a href="https://www.143.ch" class="btn-sm" target="_blank" rel="noopener">143.ch</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Jugendliche</div>
+          <h3>147 – Pro Juventute</h3>
+          <p>Beratung für Kinder und Jugendliche. Kostenlos, anonym, rund um die Uhr erreichbar.</p>
+          <a href="https://www.147.ch/" class="btn-sm" target="_blank" rel="noopener">147.ch</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Persönlich</div>
+          <h3>Vertrauensperson, Lehrperson oder Coach</h3>
+          <p>Manchmal reicht ein erstes Gespräch mit jemandem, dem du vertraust: Lehrperson, Berufsbildner, Coach oder eine nahestehende Person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABSCHLUSS -->
+
+  <section class="closing" id="abschluss">
+    <div class="container">
+      <h2>Du musst das nicht allein sortieren.</h2>
+      <p>
+        Schulden, Mahnungen oder Betreibungen können überfordern.
+        Wichtig ist nicht, alles sofort perfekt zu lösen.
+        Wichtig ist, den nächsten Schritt zu machen:
+        lesen, prüfen, Beratung holen.
+      </p>
+      <div class="closing-motto">Ein Schritt reicht, um wieder anzufangen.</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      <p class="footer-brand">Ganz normales Alltagswissen – Finanzen</p>
+      <p class="footer-sub">DudeWithDog Education</p>
+      <p class="disclaimer">
+        Diese Seite ersetzt keine Rechts- oder Finanzberatung.
+        Sie sammelt hilfreiche Anlaufstellen und verweist auf externe Angebote.
+        Bei dringenden Fristen oder Betreibungen bitte direkt eine Fachstelle kontaktieren.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
