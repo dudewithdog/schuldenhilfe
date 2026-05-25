@@ -32,7 +32,6 @@
       line-height: 1.65;
     }
 
-    /* ── HERO ─────────────────────────────────── */
     header {
       background: var(--navy);
       color: var(--cream);
@@ -78,16 +77,13 @@
     }
     .nav-pills a:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
 
-    /* ── LAYOUT ───────────────────────────────── */
     main {
       max-width: 720px;
       margin: 0 auto;
       padding: 0 1.25rem 4rem;
     }
 
-    section {
-      margin-top: 3.5rem;
-    }
+    section { margin-top: 3.5rem; }
 
     .section-label {
       font-size: 0.7rem;
@@ -111,7 +107,6 @@
       max-width: 580px;
     }
 
-    /* ── BUDGET TOOL ──────────────────────────── */
     .budget-block {
       background: var(--white);
       border: 1px solid var(--line);
@@ -227,7 +222,6 @@
     .add-row-btn:hover { background: var(--green-lt); }
     .add-row-btn svg { flex-shrink: 0; }
 
-    /* ── ERGEBNIS ─────────────────────────────── */
     .result-box {
       background: var(--navy);
       color: var(--cream);
@@ -292,7 +286,6 @@
     }
     .btn-reset:hover { background: rgba(255,255,255,0.12); }
 
-    /* ── BERATUNG ─────────────────────────────── */
     .beratung-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -326,7 +319,6 @@
       font-size: 1.2rem;
       flex-shrink: 0;
     }
-    .card-body {}
     .card-name {
       font-family: 'Playfair Display', serif;
       font-size: 0.95rem;
@@ -346,7 +338,6 @@
       font-weight: 600;
     }
 
-    /* ── NOTFALL ──────────────────────────────── */
     .notfall-box {
       background: #FEF3E2;
       border: 1px solid #E8C882;
@@ -361,7 +352,6 @@
     .notfall-box p { font-size: 0.875rem; color: #5C3D00; line-height: 1.55; }
     .notfall-box a { color: var(--gold); font-weight: 600; }
 
-    /* ── FOOTER ───────────────────────────────── */
     footer {
       background: var(--navy);
       color: #8A9BB5;
@@ -372,7 +362,6 @@
     footer strong { color: var(--cream); }
     footer a { color: var(--gold); text-decoration: none; }
 
-    /* ── PRINT ────────────────────────────────── */
     @media print {
       header .nav-pills, .add-row-btn, .btn-remove, .btn-reset { display: none !important; }
       .beratung-grid, footer { display: none !important; }
@@ -387,7 +376,6 @@
 </head>
 <body>
 
-<!-- HERO -->
 <header>
   <span class="dog">🐕</span>
   <h1>Dein <span>Finanzüberblick</span></h1>
@@ -400,13 +388,11 @@
 
 <main>
 
-  <!-- BUDGET TOOL -->
   <section id="budget">
     <p class="section-label">Schritt für Schritt</p>
     <h2>Deine Finanzübersicht</h2>
     <p class="section-intro">Trag ein, was reinkommt und was rausgeht. Du kannst beliebig viele Positionen hinzufügen — mit dem + am Ende jedes Blocks.</p>
 
-    <!-- EINNAHMEN -->
     <div class="budget-block">
       <div class="budget-block-header">
         <div class="block-icon icon-green">💰</div>
@@ -420,7 +406,6 @@
       </button>
     </div>
 
-    <!-- FIXKOSTEN -->
     <div class="budget-block">
       <div class="budget-block-header">
         <div class="block-icon icon-navy">🏠</div>
@@ -434,7 +419,6 @@
       </button>
     </div>
 
-    <!-- VARIABLE KOSTEN -->
     <div class="budget-block">
       <div class="budget-block-header">
         <div class="block-icon icon-gold">🛒</div>
@@ -448,7 +432,6 @@
       </button>
     </div>
 
-    <!-- VERPFLICHTUNGEN -->
     <div class="budget-block">
       <div class="budget-block-header">
         <div class="block-icon icon-red">📋</div>
@@ -462,7 +445,6 @@
       </button>
     </div>
 
-    <!-- ERGEBNIS -->
     <div class="result-box">
       <div class="result-label">Deine Bilanz</div>
       <div class="result-rows">
@@ -491,7 +473,6 @@
     </div>
   </section>
 
-  <!-- BERATUNGSSTELLEN -->
   <section id="beratung">
     <p class="section-label">Wo du Hilfe findest</p>
     <h2>Beratungsstellen Schweiz</h2>
@@ -554,7 +535,7 @@
         <strong>Zahlungsbefehl erhalten?</strong> Reagiere innerhalb von 10 Tagen.
         Erhebe <strong>Rechtsvorschlag</strong> — das stoppt die Betreibung vorerst und kostet nichts.
         Hol dir dann Unterstützung bei einer der Stellen oben.
-        Ein eigenes Kapitel mit genauen Schritten folgt.
+        Musterschreiben und weiterführende Informationen findest du direkt bei den verlinkten Anbietern.
       </p>
     </div>
   </section>
